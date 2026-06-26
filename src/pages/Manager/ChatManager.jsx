@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { API_URL, WS_URL } from '../../config';
 import { MessageCircle, Check, Send } from 'lucide-react';
 import { useManager } from '../../context/ManagerContext';
 
@@ -23,7 +24,7 @@ const ChatManager = () => {
 
   useEffect(() => {
     // Authenticate as staff
-    fetch('http://localhost:8001/api/chat/token/', {
+    fetch(`${API_URL}/api/chat/token/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: 'manager', is_staff: true })
@@ -39,17 +40,17 @@ const ChatManager = () => {
     if (!token || !userId) return;
 
     // Fetch initial rooms
-    fetch(`http://localhost:8001/api/chat/rooms/?user_id=${userId}`)
+    fetch(`${API_URL}/api/chat/rooms/?user_id=${userId}`)
       .then(res => res.json())
       .then(data => setRooms(data));
 
     // Connect to Agent WS for new rooms
-    const socket = new WebSocket(`ws://localhost:8001/ws/agents/?token=${token}`);
+    const socket = new WebSocket(`${WS_URL}/ws/agents/?token=${token}`);
     socket.onmessage = (e) => {
       const data = JSON.parse(e.data);
       if (data.type === 'new_room') {
         // Refresh rooms list
-        fetch(`http://localhost:8001/api/chat/rooms/?user_id=${userId}`)
+        fetch(`${API_URL}/api/chat/rooms/?user_id=${userId}`)
           .then(res => res.json())
           .then(d => setRooms(d));
       }
@@ -71,7 +72,7 @@ const ChatManager = () => {
 
     if (chatWs) chatWs.close();
 
-    const socket = new WebSocket(`ws://localhost:8001/ws/chat/${room.id}/?token=${token}`);
+    const socket = new WebSocket(`${WS_URL}/ws/chat/${room.id}/?token=${token}`);
     socket.onmessage = (e) => {
       const data = JSON.parse(e.data);
       setMessages(prev => [...prev, {
@@ -84,13 +85,13 @@ const ChatManager = () => {
   };
 
   const pickUpRoom = async (roomId) => {
-    await fetch(`http://localhost:8001/api/chat/rooms/${roomId}/pick_up/`, {
+    await fetch(`${API_URL}/api/chat/rooms/${roomId}/pick_up/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user_id: userId })
     });
     // Refresh rooms
-    fetch(`http://localhost:8001/api/chat/rooms/?user_id=${userId}`)
+    fetch(`${API_URL}/api/chat/rooms/?user_id=${userId}`)
       .then(res => res.json())
       .then(d => {
         setRooms(d);
@@ -100,12 +101,12 @@ const ChatManager = () => {
   };
 
   const closeRoom = async (roomId) => {
-    await fetch(`http://localhost:8001/api/chat/rooms/${roomId}/close/`, {
+    await fetch(`${API_URL}/api/chat/rooms/${roomId}/close/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     });
     // Refresh rooms
-    fetch(`http://localhost:8001/api/chat/rooms/?user_id=${userId}`)
+    fetch(`${API_URL}/api/chat/rooms/?user_id=${userId}`)
       .then(res => res.json())
       .then(d => {
         setRooms(d);

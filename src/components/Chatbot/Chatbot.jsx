@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageCircle, X, Send } from 'lucide-react';
 import { useUser } from '../../context/UserContext';
+import { API_URL, WS_URL } from '../../config';
 import './Chatbot.css';
 
 const Chatbot = () => {
@@ -31,7 +32,7 @@ const Chatbot = () => {
     setLoading(true);
     try {
       // 1. Get Token
-      const tokenRes = await fetch('http://localhost:8001/api/chat/token/', {
+      const tokenRes = await fetch(`${API_URL}/api/chat/token/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, is_staff: false })
@@ -41,7 +42,7 @@ const Chatbot = () => {
       const userId = tokenData.user_id;
 
       // 2. Initiate Room
-      const roomRes = await fetch('http://localhost:8001/api/chat/rooms/initiate/', {
+      const roomRes = await fetch(`${API_URL}/api/chat/rooms/initiate/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: userId })
@@ -62,7 +63,7 @@ const Chatbot = () => {
       }
 
       // 3. Connect Websocket
-      const socket = new WebSocket(`ws://localhost:8001/ws/chat/${currentRoomId}/?token=${token}`);
+      const socket = new WebSocket(`${WS_URL}/ws/chat/${currentRoomId}/?token=${token}`);
       
       socket.onopen = () => {
         setWs(socket);
@@ -98,7 +99,7 @@ const Chatbot = () => {
     if (!roomId) return;
     setLoading(true);
     try {
-      await fetch(`http://localhost:8001/api/chat/rooms/${roomId}/close/`, {
+      await fetch(`${API_URL}/api/chat/rooms/${roomId}/close/`, {
         method: 'POST'
       });
       if (ws) ws.close();
