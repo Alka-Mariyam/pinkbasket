@@ -11,13 +11,9 @@ services:
       - key: PORT
         value: 8001
 
-  - type: web
+  - type: static
     name: pinkbasket-frontend
-    env: docker
-    dockerfilePath: ./Dockerfile
     region: ohio
-    plan: free
     branch: main
-    envVars:
-      - key: PORT
-        value: 80
+    buildCommand: npm install && npm run build
+    publishPath: ./dist
