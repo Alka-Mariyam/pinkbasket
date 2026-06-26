@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: pinkbasket-backend
+    env: docker
+    dockerfilePath: ./server/Dockerfile
+    region: ohio
+    plan: free
+    branch: main
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8001
+
+  - type: web
+    name: pinkbasket-frontend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    region: ohio
+    plan: free
+    branch: main
+    envVars:
+      - key: PORT
+        value: 80
