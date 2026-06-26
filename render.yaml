@@ -2,7 +2,7 @@ services:
   - type: web
     name: pinkbasket-backend
     env: docker
-    dockerfilePath: ./server/Dockerfile
+    dockerfilePath: ./backend/Dockerfile
     region: ohio
     plan: free
     branch: main
