@@ -58,6 +58,9 @@ class ChatRoomViewSet(viewsets.ModelViewSet):
         except User.DoesNotExist:
             return Response({'error': 'Invalid user'}, status=400)
 
+        from .tasks import send_dummy_email_task
+        send_dummy_email_task.delay(user.id, "Welcome to Support!", "An agent will be with you shortly.")
+
         room = ChatRoom.objects.filter(customer=user, status__in=['open', 'picked_up']).first()
         
         if not room:

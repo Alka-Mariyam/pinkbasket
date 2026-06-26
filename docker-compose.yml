@@ -1,15 +1,38 @@
 version: '3.8'
 
 services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: pinkbasket-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: unless-stopped
+
   backend:
     build:
-      context: ./server
+      context: ./backend
       dockerfile: Dockerfile
     container_name: pinkbasket-backend
     ports:
-      - "3001:3001"
+      - "8001:8001"
     environment:
-      - NODE_ENV=production
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+    depends_on:
+      - rabbitmq
+    restart: unless-stopped
+
+  celery:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pinkbasket-celery
+    command: celery -A core worker -l info
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+    depends_on:
+      - backend
+      - rabbitmq
     restart: unless-stopped
 
   frontend:
