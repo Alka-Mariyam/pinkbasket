@@ -1,0 +1,529 @@
+[
+  {
+    "id": "p1782199128675",
+    "name": "Laptop",
+    "price": 84900,
+    "categoryId": "c4",
+    "description": "Apple 2026 MacBook Neo 13″ Laptop with A18 Pro chip: Built for AI and Apple Intelligence, Liquid Retina Display, 8GB Unified Memory, 256GB SSD Storage, 1080p FaceTime HD Camera; Silver",
+    "images": [
+      "/images/laptop_mockup.png"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "reviewsList": [],
+    "stockStatus": "In Stock",
+    "discount": 0
+  },
+  {
+    "id": "p1",
+    "name": "Pastel Summer Floral Dress",
+    "categoryId": "c1",
+    "price": 3999,
+    "originalPrice": 4800,
+    "discount": 25,
+    "rating": 4.8,
+    "reviews": 124,
+    "reviewBreakdown": {
+      "1": 1,
+      "2": 1,
+      "3": 3,
+      "4": 15,
+      "5": 80
+    },
+    "stockStatus": "In Stock",
+    "pinkPassEligible": true,
+    "images": [
+      "/images/floral_dress.png",
+      "/images/floral_dress.png"
+    ],
+    "description": "A beautiful pastel floral dress perfect for summer outings. Lightweight and breathable fabric.",
+    "specifications": {
+      "Material": "Cotton Blend",
+      "Care": "Machine Wash",
+      "Fit": "Regular"
+    },
+    "variants": [
+      {
+        "type": "Size",
+        "options": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "type": "Color",
+        "options": [
+          "Pastel Pink",
+          "Soft Yellow"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "q": "Is this dress true to size?",
+        "a": "Yes, it fits perfectly according to the size chart."
+      },
+      {
+        "q": "Does it shrink after washing?",
+        "a": "No, but we recommend cold wash to maintain the fabric."
+      }
+    ],
+    "frequentlyBoughtTogether": [
+      "p2",
+      "p8"
+    ],
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r1",
+        "author": "Emma W.",
+        "rating": 5,
+        "date": "2023-06-10",
+        "text": "This dress is so breathable! The floral pattern is gorgeous for summer. True to size.",
+        "images": [
+          "/images/floral_dress.png"
+        ]
+      },
+      {
+        "id": "r2",
+        "author": "Sophia L.",
+        "rating": 4,
+        "date": "2023-06-15",
+        "text": "Lovely dress but slightly longer than expected. Had to get it hemmed.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "p2",
+    "name": "Premium Leather Crossbody Bag",
+    "categoryId": "c5",
+    "price": 9600,
+    "originalPrice": 12000,
+    "discount": 20,
+    "rating": 4.9,
+    "reviews": 89,
+    "reviewBreakdown": {
+      "1": 0,
+      "2": 0,
+      "3": 2,
+      "4": 8,
+      "5": 90
+    },
+    "stockStatus": "Low Stock",
+    "pinkPassEligible": false,
+    "images": [
+      "/images/crossbody_bag.png",
+      "/images/crossbody_bag.png"
+    ],
+    "description": "Elegant leather crossbody bag with adjustable strap and multiple compartments.",
+    "specifications": {
+      "Material": "Genuine Leather",
+      "Dimensions": "10x8x3 inches"
+    },
+    "variants": [
+      {
+        "type": "Color",
+        "options": [
+          "Blush Pink",
+          "Mustard Yellow",
+          "Classic Brown"
+        ]
+      }
+    ],
+    "questions": [],
+    "frequentlyBoughtTogether": [
+      "p1"
+    ],
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r3",
+        "author": "Olivia P.",
+        "rating": 5,
+        "date": "2023-05-22",
+        "text": "The leather feels very premium. Perfect size for my phone and keys.",
+        "images": [
+          "/images/crossbody_bag.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p3",
+    "name": "Rose Gold Smartwatch",
+    "categoryId": "c3",
+    "price": 15999,
+    "originalPrice": 19999,
+    "discount": 20,
+    "rating": 4.7,
+    "reviews": 342,
+    "stockStatus": "In Stock",
+    "images": [
+      "/images/smartwatch.png",
+      "/images/smartwatch.png"
+    ],
+    "description": "Track your fitness, notifications, and health with this stunning rose gold smartwatch.",
+    "specifications": {
+      "Battery": "Up to 7 days",
+      "Water Resistance": "5ATM"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r4",
+        "author": "Mia C.",
+        "rating": 5,
+        "date": "2023-08-01",
+        "text": "The rose gold color matches everything. The step tracker is very accurate!",
+        "images": [
+          "/images/smartwatch.png"
+        ]
+      },
+      {
+        "id": "r5",
+        "author": "Ava H.",
+        "rating": 4,
+        "date": "2023-08-10",
+        "text": "Battery lasts about 2 days. Overall a great smartwatch for the price.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "p4",
+    "name": "Mystery Beauty Box",
+    "categoryId": "c2",
+    "price": 2399,
+    "originalPrice": 8000,
+    "discount": 70,
+    "rating": 5,
+    "reviews": 56,
+    "stockStatus": "In Stock",
+    "images": [
+      "/images/mystery_box.png",
+      "/images/mystery_box.png"
+    ],
+    "description": "A surprise selection of premium beauty products worth over ₹8000!",
+    "specifications": {
+      "Items": "5-7 full size products"
+    },
+    "isMystery": true,
+    "reviewsList": [
+      {
+        "id": "r6",
+        "author": "Isabella R.",
+        "rating": 5,
+        "date": "2023-09-05",
+        "text": "Such a fun surprise! Got 3 full-sized products and some cute samples.",
+        "images": [
+          "/images/mystery_box.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p5",
+    "name": "Silk Sleep Mask & Pillowcase Set",
+    "categoryId": "c4",
+    "price": 2800,
+    "originalPrice": 4000,
+    "discount": 30,
+    "rating": 4.6,
+    "reviews": 210,
+    "stockStatus": "In Stock",
+    "images": [
+      "/images/sleep_mask.png",
+      "/images/sleep_mask.png"
+    ],
+    "description": "100% pure mulberry silk pillowcase and sleep mask for the ultimate beauty sleep.",
+    "specifications": {
+      "Material": "Mulberry Silk",
+      "Color": "Champagne Pink"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r7",
+        "author": "Charlotte M.",
+        "rating": 5,
+        "date": "2023-07-20",
+        "text": "So soft and blocks out all the light. The silk feels luxurious.",
+        "images": [
+          "/images/sleep_mask.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p6",
+    "name": "Wireless Noise-Canceling Earbuds",
+    "categoryId": "c3",
+    "price": 11999,
+    "originalPrice": 15999,
+    "discount": 25,
+    "rating": 4.8,
+    "reviews": 450,
+    "stockStatus": "In Stock",
+    "images": [
+      "/images/earbuds.png",
+      "/images/earbuds.png"
+    ],
+    "description": "Premium pastel pink earbuds with active noise cancellation and 24h battery life.",
+    "specifications": {
+      "Battery": "24 Hours",
+      "Bluetooth": "5.2"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r8",
+        "author": "Amelia B.",
+        "rating": 4,
+        "date": "2023-10-12",
+        "text": "Noise cancellation is pretty good. Bass could be a bit punchier.",
+        "images": [
+          "/images/earbuds.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p7",
+    "name": "Minimalist Ceramic Vase",
+    "categoryId": "c4",
+    "price": 2240,
+    "originalPrice": 2240,
+    "discount": 0,
+    "rating": 4.4,
+    "reviews": 34,
+    "stockStatus": "Out of Stock",
+    "images": [
+      "/images/vase.png",
+      "/images/vase.png"
+    ],
+    "description": "A beautiful matte ceramic vase to hold your favorite fresh or dried flowers.",
+    "specifications": {
+      "Material": "Ceramic",
+      "Height": "8 inches"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r9",
+        "author": "Harper K.",
+        "rating": 5,
+        "date": "2023-11-01",
+        "text": "Exactly the minimalist look I wanted for my living room.",
+        "images": [
+          "/images/vase.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p8",
+    "name": "Hydrating Rose Face Mist",
+    "categoryId": "c2",
+    "price": 1440,
+    "originalPrice": 1920,
+    "discount": 25,
+    "rating": 4.9,
+    "reviews": 512,
+    "stockStatus": "In Stock",
+    "images": [
+      "/images/face_mist.png",
+      "/images/face_mist.png"
+    ],
+    "description": "Refresh and hydrate your skin on the go with this soothing rosewater facial mist.",
+    "specifications": {
+      "Volume": "100ml",
+      "Skin Type": "All Skin Types"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r10",
+        "author": "Evelyn J.",
+        "rating": 5,
+        "date": "2023-04-18",
+        "text": "Smells heavenly and gives my skin a nice dewy glow.",
+        "images": [
+          "/images/face_mist.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p9",
+    "name": "Luxury Glow Skincare Set",
+    "categoryId": "c6",
+    "price": 3999,
+    "originalPrice": 8000,
+    "discount": 50,
+    "rating": 4.9,
+    "reviews": 420,
+    "stockStatus": "In Stock",
+    "pinkPassEligible": true,
+    "images": [
+      "/images/skincare_set.png",
+      "/images/skincare_set.png"
+    ],
+    "description": "A massive 50% discount on our award-winning premium 3-step glow skincare routine.",
+    "specifications": {
+      "Skin Type": "All",
+      "Includes": "Cleanser, Serum, Moisturizer"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r11",
+        "author": "Abigail D.",
+        "rating": 5,
+        "date": "2023-03-30",
+        "text": "My skin has never looked better! The serum is my favorite.",
+        "images": [
+          "/images/skincare_set.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "name": "Pastel Mechanical Keyboard",
+    "categoryId": "c6",
+    "price": 5599,
+    "originalPrice": 7999,
+    "discount": 30,
+    "rating": 4.8,
+    "reviews": 185,
+    "stockStatus": "In Stock",
+    "pinkPassEligible": true,
+    "images": [
+      "/images/keyboard.png",
+      "/images/keyboard.png"
+    ],
+    "description": "A beautiful pastel pink wireless mechanical keyboard perfect for your aesthetic desk setup.",
+    "specifications": {
+      "Switches": "Silent Red",
+      "Connectivity": "Bluetooth / USB-C"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r12",
+        "author": "Emily F.",
+        "rating": 5,
+        "date": "2023-12-05",
+        "text": "Typing on this is so satisfying! The pastel colors are adorable.",
+        "images": [
+          "/images/keyboard.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p11",
+    "name": "Designer Sunglasses (Flash Sale)",
+    "categoryId": "c6",
+    "price": 1999,
+    "originalPrice": 4999,
+    "discount": 60,
+    "rating": 4.5,
+    "reviews": 92,
+    "stockStatus": "Low Stock",
+    "pinkPassEligible": false,
+    "images": [
+      "/images/sunglasses.png",
+      "/images/sunglasses.png"
+    ],
+    "description": "Premium polarized sunglasses at an unbeatable 60% off during our Flash Sale event!",
+    "specifications": {
+      "Lenses": "Polarized",
+      "Frame": "Rose Gold Metal"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r13",
+        "author": "Elizabeth S.",
+        "rating": 4,
+        "date": "2023-06-25",
+        "text": "Very chic, but they slide down my nose a little bit.",
+        "images": [
+          "/images/sunglasses.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p12",
+    "name": "Smart Home Speaker (Pink Edition)",
+    "categoryId": "c6",
+    "price": 3999,
+    "originalPrice": 7999,
+    "discount": 50,
+    "rating": 4.6,
+    "reviews": 310,
+    "stockStatus": "In Stock",
+    "pinkPassEligible": true,
+    "images": [
+      "/images/speaker.png",
+      "/images/speaker.png"
+    ],
+    "description": "A voice-controlled smart speaker wrapped in premium pink fabric. Deep bass and crystal clear vocals at 50% off.",
+    "specifications": {
+      "Connectivity": "WiFi / Bluetooth",
+      "Audio": "360° Sound"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r14",
+        "author": "Sofia T.",
+        "rating": 5,
+        "date": "2023-11-20",
+        "text": "Sound quality is amazing for its size. And it looks great on my shelf!",
+        "images": [
+          "/images/speaker.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p13",
+    "name": "Aesthetic Leather Desk Mat",
+    "categoryId": "c6",
+    "price": 1199,
+    "originalPrice": 1999,
+    "discount": 40,
+    "rating": 4.8,
+    "reviews": 145,
+    "stockStatus": "In Stock",
+    "pinkPassEligible": true,
+    "images": [
+      "/images/desk_mat.png",
+      "/images/desk_mat.png"
+    ],
+    "description": "Protect your desk and elevate your workspace with this oversized pastel desk mat.",
+    "specifications": {
+      "Material": "Vegan Leather",
+      "Size": "90x40 cm"
+    },
+    "isMystery": false,
+    "reviewsList": [
+      {
+        "id": "r15",
+        "author": "Avery W.",
+        "rating": 5,
+        "date": "2023-01-15",
+        "text": "Protects my desk and my mouse glides smoothly. Love the color!",
+        "images": [
+          "/images/desk_mat.png"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+:root {
+  /* Brand Colors - Premium Pink & Yellow */
+  --color-primary: #FF2E93;
+  --color-primary-light: #FF5AAB;
+  --color-primary-dark: #D81B75;
+  --color-primary-soft: #FFE5F1;
+  
+  --color-secondary: #FFD100;
+  --color-secondary-light: #FFE04D;
+  --color-secondary-dark: #CCAA00;
+  --color-secondary-soft: #FFF9D6;
+
+  /* Pastel Theme Base Colors */
+  --color-background: #FFE0F0; /* Stronger Pastel Pink background */
+  --color-surface: #FFF9D6; /* Stronger Pastel Yellow for surfaces/cards */
+  --color-text-main: #3D2631; /* Soft dark brown/pink for text */
+  --color-text-muted: #8F7A85; /* Muted pastel dark tone */
+  --color-border: #FFB3D9; /* Slightly darker pink border for contrast */
+  
+  /* Status Colors */
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(26, 26, 36, 0.04);
+  --shadow-md: 0 8px 24px rgba(26, 26, 36, 0.08);
+  --shadow-lg: 0 20px 40px rgba(255, 46, 147, 0.12);
+  --shadow-glow: 0 0 20px rgba(255, 46, 147, 0.4);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='dark'] {
+  --color-background: #0F0F13;
+  --color-surface: #1C1C24;
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #A1A1AA;
+  --color-border: #2D2D3A;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 20px 40px rgba(255, 46, 147, 0.2);
+}
